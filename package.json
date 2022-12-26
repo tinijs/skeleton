@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "The base structure of a TiniJS app.",
+  "private": true,
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "staticFiles": {
+    "staticPath": "src/public"
+  },
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "tini serve",
+    "build": "tini build",
+    "preview": "tini preview",
+    "lint": "gts lint",
+    "check": "tsc --noEmit",
+    "ci": "npm run lint && npm run check && npm run build"
+  },
+  "devDependencies": {
+    "gts": "^4.0.0",
+    "typescript": "~4.7.0"
+  }
+}
