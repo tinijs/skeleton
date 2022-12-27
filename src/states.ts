@@ -1,18 +1,14 @@
-import {Store as AppStore} from '@tinijs/store';
+import {Store as AppStore, createUpdateTransaction} from '@tinijs/store';
 
-// define the states here
 const states = {
-  name: 'TiniJS',
+  name: 'App',
 };
-
-// // IMPORTANT: DO NOT import the "store" from this file, use the decorator instead:
-// // import {Store, UseStore} from '@tinijs/store';
-// // @UseStore() store!: Store;
-// export const store = createStore<States>(states);
-
-// add transactions here
-
 export default states;
 
 export type States = typeof states;
 export type Store = AppStore<States>;
+
+export const CHANGE_NAME = createUpdateTransaction<string, string>(
+  'name',
+  name => name
+);
