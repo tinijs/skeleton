@@ -1,4 +1,5 @@
 .DS_Store
+.tinijs
 .parcel-cache
 node_modules/
 dist/
