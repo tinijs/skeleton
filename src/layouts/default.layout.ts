@@ -1,10 +1,9 @@
-import {LitElement, html} from 'lit';
-import {customElement} from 'lit/decorators.js';
+import {TiniComponent, Layout, html} from '@tinijs/core';
 
 import '../components/header.component';
 
-@customElement('layout-default')
-export default class LayoutDefault extends LitElement {
+@Layout('layout-default')
+export default class LayoutDefault extends TiniComponent {
   render() {
     return html`
       <div class="layout-default">
@@ -12,5 +11,11 @@ export default class LayoutDefault extends LitElement {
         <div class="page"><slot></slot></div>
       </div>
     `;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'layout-default': LayoutDefault;
   }
 }

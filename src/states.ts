@@ -1,14 +1,18 @@
-import {Store as AppStore, createUpdateTransaction} from '@tinijs/store';
+import {Store as AppStore, Transaction, MutationToolbox} from '@tinijs/store';
 
 const states = {
-  name: 'App',
+  foo: 'Foo -> 0',
+  bar: 0,
 };
 export default states;
 
 export type States = typeof states;
 export type Store = AppStore<States>;
 
-export const CHANGE_NAME = createUpdateTransaction<string, string>(
-  'name',
-  name => name
-);
+export const UPDATE_FOO = function (foo: string) {
+  return ({update}: MutationToolbox) => update('foo', () => foo);
+} as Transaction;
+
+export const UPDATE_BAR = function (bar: number) {
+  return ({update}: MutationToolbox) => update('bar', () => bar);
+} as Transaction;

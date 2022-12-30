@@ -1,7 +1,3 @@
-import {AppRoot} from './app';
+import configs from './configs/development';
 
-declare global {
-  interface HTMLElementTagNameMap {
-    'app-root': AppRoot;
-  }
-}
+export type AppConfigs = typeof configs;

@@ -1,39 +1,37 @@
-import {LitElement, html} from 'lit';
-import {customElement, state} from 'lit/decorators.js';
-import {UseStore, Unsubscriber} from '@tinijs/store';
+import {TiniComponent, Component, State, html} from '@tinijs/core';
+import {SubscribeStore, StoreSubscription} from '@tinijs/store';
 
-import {Store, States} from '../states';
+import {States} from '../states';
 
-@customElement('app-header')
-export default class AppHeader extends LitElement {
-  @UseStore() store!: Store;
+@Component('app-header')
+export default class AppHeader extends TiniComponent {
+  @SubscribeStore() storeSubscription!: StoreSubscription<States>;
+  @State() bar!: number;
 
-  private _unsubscribeStates!: Unsubscriber;
-  @state() states!: States;
-
-  connectedCallback() {
-    super.connectedCallback();
-    this._unsubscribeStates = this.store.subscribe(
-      states => (this.states = states)
-    );
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-    this._unsubscribeStates();
+  onInit() {
+    this.storeSubscription.subscribe(({bar}) => {
+      this.bar = bar;
+    });
   }
 
   render() {
     return html`
       <header>
-        <div class="left"><h1>${this.states.name}</h1></div>
+        <div class="left"><h1>Bar #${this.bar}</h1></div>
         <div class="right">
           <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/lazy">Lazy</a></li>
             <li><a href="/xyz">Oops</a></li>
           </ul>
         </div>
       </header>
     `;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'app-header': AppHeader;
   }
 }

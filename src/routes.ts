@@ -10,6 +10,13 @@ const routes: Route[] = [
         component: 'page-home',
       },
       {
+        path: '/lazy',
+        component: 'page-lazy',
+        action: async () => {
+          await import('./pages/lazy.page');
+        },
+      },
+      {
         path: '(.*)',
         component: 'page-404',
       },

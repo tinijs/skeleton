@@ -1,49 +1,86 @@
-import {LitElement, html} from 'lit';
-import {customElement, state} from 'lit/decorators.js';
-import {UseService} from '@tinijs/core';
-import {UseStore, Unsubscriber} from '@tinijs/store';
+import {
+  TiniComponent,
+  Page,
+  UseConfigs,
+  UseService,
+  State,
+  html,
+  css,
+} from '@tinijs/core';
+import {SubscribeStore, StoreSubscription} from '@tinijs/store';
 
-import {Store, States, CHANGE_NAME} from '../states';
+import {AppConfigs} from '../types';
+import {States, UPDATE_FOO, UPDATE_BAR} from '../states';
 
-import {SampleService} from '../services/sample.service';
+import {Sample3Service} from '../services/sample3.service';
 
-import '../components/hello.component';
+import '../components/welcome.component';
 
-@customElement('page-home')
-export class PageHome extends LitElement {
-  @UseStore() store!: Store;
-  @UseService() sampleService!: SampleService;
+@Page('page-home')
+export class PageHome extends TiniComponent {
+  @UseConfigs() configs!: AppConfigs;
+  @SubscribeStore() storeSubscription!: StoreSubscription<States>;
+  @UseService() sample3Service!: Sample3Service;
 
-  private _unsubcribeStates!: Unsubscriber;
-  @state() states!: States;
+  @State() foo!: string;
 
-  connectedCallback(): void {
-    super.connectedCallback();
-    this._unsubcribeStates = this.store.subscribe(
-      states => (this.states = states)
+  async onInit() {
+    this.storeSubscription.subscribe(({foo}) => {
+      this.foo = foo;
+    });
+  }
+
+  updateFoo() {
+    this.storeSubscription.commit(
+      UPDATE_FOO,
+      'Foo -> ' + Math.round(Math.random() * 100)
     );
   }
 
-  disconnectedCallback(): void {
-    super.disconnectedCallback();
-    this._unsubcribeStates();
-  }
-
-  changeName() {
-    this.store.commit(CHANGE_NAME, 'App ' + Math.round(Math.random() * 100));
+  updateBar() {
+    this.storeSubscription.commit(UPDATE_BAR, Math.round(Math.random() * 100));
   }
 
   protected render() {
     return html`
       <div>
-        <app-hello></app-hello>
+        <app-welcome></app-welcome>
+        <p><strong>${this.foo}</strong></p>
         <p>
-          <button @click="${this.changeName}">
-            Change name (${this.states.name})
-          </button>
+          <button @click="${this.updateFoo}">Change foo</button>
+          <button @click="${this.updateBar}">Change bar</button>
         </p>
-        <p>Service: <strong>[${this.sampleService.name}]</strong></p>
+        <ul>
+          <li>Service: ${this.sample3Service.name}</li>
+          <li>Service: ${this.sample3Service.sample()}</li>
+          <li>Config: ${this.configs.env}</li>
+        </ul>
       </div>
     `;
+  }
+
+  static styles = css`
+    p {
+      color: blue;
+
+      button {
+        color: red;
+      }
+    }
+
+    ul {
+      margin: 0;
+      list-style: none;
+
+      li {
+        color: green;
+      }
+    }
+  `;
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'page-home': PageHome;
   }
 }
