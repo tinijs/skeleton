@@ -1,10 +1,10 @@
 import {TiniComponent, Component, State, html} from '@tinijs/core';
 import {SubscribeStore, StoreSubscription} from '@tinijs/store';
 
-import {States} from '../states';
+import {States} from '../app/states';
 
 @Component('app-header')
-export default class AppHeader extends TiniComponent {
+export class AppHeader extends TiniComponent {
   @SubscribeStore() storeSubscription!: StoreSubscription<States>;
   @State() bar!: number;
 

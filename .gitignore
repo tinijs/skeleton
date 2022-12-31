@@ -1,5 +1,24 @@
+# general
 .DS_Store
-.tinijs
-.parcel-cache
 node_modules/
+
+# parceljs
+.parcel-cache/
 dist/
+
+# tinijs
+.tinijs/
+
+# app
+app/*.js
+configs/*.js
+layouts/*.js
+pages/*.js
+components/*.js
+services/*.js
+
+# lib
+public-api.js
+*.map
+*.d.ts
+*.tgz

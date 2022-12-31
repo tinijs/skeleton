@@ -7,27 +7,28 @@ import {
 import {registerRoutes} from '@tinijs/router';
 import {createStore} from '@tinijs/store';
 
-import configs from './configs/development';
+import configs from '../configs/development';
 import routes, {Router} from './routes';
 import states, {Store} from './states';
 
-// Lazy DI, provide before and imported conponent
+// Lazy DI: provide before and imported conponent
 provideServices({
   SampleService: {
-    provider: () => import('./services/sample.service'),
+    provider: () => import('../services/sample.service'),
   },
   Sample2Service: {
-    provider: () => import('./services/sample2.service'),
+    provider: () => import('../services/sample2.service'),
   },
   Sample3Service: {
-    provider: () => import('./services/sample3.service'),
+    provider: () => import('../services/sample3.service'),
     deps: ['SampleService'],
   },
 });
 
-import './layouts/default.layout';
-import './pages/home.page';
-import './pages/404.page';
+// Entry UI: import preload components
+import '../layouts/default.layout';
+import '../pages/home.page';
+import '../pages/404.page';
 
 @App()
 export class AppRoot extends TiniComponent {

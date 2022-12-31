@@ -1,2 +1,6 @@
-.tinijs/
+# parceljs
 dist/
+
+# tinijs
+vendor/
+.tinijs/

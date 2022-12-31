@@ -9,8 +9,8 @@ import {
 } from '@tinijs/core';
 import {SubscribeStore, StoreSubscription} from '@tinijs/store';
 
-import {AppConfigs} from '../types';
-import {States, UPDATE_FOO, UPDATE_BAR} from '../states';
+import {AppConfigs} from '../app/types';
+import {States, UPDATE_FOO, UPDATE_BAR} from '../app/states';
 
 import {Sample3Service} from '../services/sample3.service';
 
@@ -43,19 +43,17 @@ export class PageHome extends TiniComponent {
 
   protected render() {
     return html`
-      <div>
-        <app-welcome></app-welcome>
-        <p><strong>${this.foo}</strong></p>
-        <p>
-          <button @click="${this.updateFoo}">Change foo</button>
-          <button @click="${this.updateBar}">Change bar</button>
-        </p>
-        <ul>
-          <li>Service: ${this.sample3Service.name}</li>
-          <li>Service: ${this.sample3Service.sample()}</li>
-          <li>Config: ${this.configs.env}</li>
-        </ul>
-      </div>
+      <app-welcome></app-welcome>
+      <p><strong>${this.foo}</strong></p>
+      <p>
+        <button @click="${this.updateFoo}">Change foo</button>
+        <button @click="${this.updateBar}">Change bar</button>
+      </p>
+      <ul>
+        <li>Service: ${this.sample3Service.name}</li>
+        <li>Service: ${this.sample3Service.sample()}</li>
+        <li>Config: ${this.configs.env}</li>
+      </ul>
     `;
   }
 

@@ -6,9 +6,6 @@ const states = {
 };
 export default states;
 
-export type States = typeof states;
-export type Store = AppStore<States>;
-
 export const UPDATE_FOO = function (foo: string) {
   return ({update}: MutationToolbox) => update('foo', () => foo);
 } as Transaction;
@@ -16,3 +13,6 @@ export const UPDATE_FOO = function (foo: string) {
 export const UPDATE_BAR = function (bar: number) {
   return ({update}: MutationToolbox) => update('bar', () => bar);
 } as Transaction;
+
+export type States = typeof states;
+export type Store = AppStore<States>;
