@@ -3,7 +3,7 @@ import {
   Page,
   UseConfigs,
   UseService,
-  State,
+  Reactive,
   html,
   css,
 } from '@tinijs/core';
@@ -18,13 +18,14 @@ import '../components/welcome.component';
 
 @Page('page-home')
 export class PageHome extends TiniComponent {
-  @UseConfigs() configs!: AppConfigs;
   @SubscribeStore() storeSubscription!: StoreSubscription<States>;
+
+  @UseConfigs() configs!: AppConfigs;
   @UseService() sample3Service!: Sample3Service;
 
-  @State() foo!: string;
+  @Reactive() foo!: string;
 
-  async onInit() {
+  onInit() {
     this.storeSubscription.subscribe(({foo}) => {
       this.foo = foo;
     });
@@ -41,21 +42,19 @@ export class PageHome extends TiniComponent {
     this.storeSubscription.commit(UPDATE_BAR, Math.round(Math.random() * 100));
   }
 
-  protected render() {
-    return html`
-      <app-welcome></app-welcome>
-      <p><strong>${this.foo}</strong></p>
-      <p>
-        <button @click="${this.updateFoo}">Change foo</button>
-        <button @click="${this.updateBar}">Change bar</button>
-      </p>
-      <ul>
-        <li>Service: ${this.sample3Service.name}</li>
-        <li>Service: ${this.sample3Service.sample()}</li>
-        <li>Config: ${this.configs.env}</li>
-      </ul>
-    `;
-  }
+  protected template = html`
+    <app-welcome></app-welcome>
+    <p><strong>${this.foo}</strong></p>
+    <p>
+      <button @click="${this.updateFoo}">Change foo</button>
+      <button @click="${this.updateBar}">Change bar</button>
+    </p>
+    <ul>
+      <li>Service: ${this.sample3Service.name}</li>
+      <li>Service: ${this.sample3Service.sample()}</li>
+      <li>Config: ${this.configs.env}</li>
+    </ul>
+  `;
 
   static styles = css`
     p {

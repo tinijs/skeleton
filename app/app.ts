@@ -36,11 +36,9 @@ export class AppRoot extends TiniComponent {
   $router!: Router;
   $store!: Store;
 
-  onCreate() {
-    setTimeout(() => {
-      this.$router = registerRoutes(routes);
-      this.$store = createStore(states);
-    });
+  onReady() {
+    this.$router = registerRoutes(routes);
+    this.$store = createStore(states);
   }
 
   protected render() {

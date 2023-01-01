@@ -6,14 +6,12 @@ import {Sample2Service} from '../services/sample2.service';
 export class PageLazy extends TiniComponent {
   @UseService() sample2Service!: Sample2Service;
 
-  protected render() {
-    return html`
-      <h1>Me lazy!!!</h1>
-      <ul>
-        <li>Service: ${this.sample2Service.name}</li>
-      </ul>
-    `;
-  }
+  protected template = html`
+    <h1>Me lazy!!!</h1>
+    <ul>
+      <li>Service: ${this.sample2Service.name}</li>
+    </ul>
+  `;
 }
 
 declare global {

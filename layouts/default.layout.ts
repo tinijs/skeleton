@@ -4,12 +4,19 @@ import '../components/header.component';
 
 @Layout('layout-default')
 export class LayoutDefault extends TiniComponent {
-  render() {
-    return html`
-      <div class="header"><app-header /></div>
-      <div class="page"><slot></slot></div>
-    `;
+  handleCustomEvent({detail: payload}: CustomEvent<string>) {
+    console.log('handleCustomEvent(): ', {payload});
   }
+
+  protected template = html`
+    <div class="header">
+      <app-header
+        attr="xxx"
+        @customEvent=${this.handleCustomEvent}
+      ></app-header>
+    </div>
+    <div class="page"><slot></slot></div>
+  `;
 }
 
 declare global {
