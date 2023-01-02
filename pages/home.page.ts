@@ -7,7 +7,7 @@ import {
   html,
   css,
 } from '@tinijs/core';
-import {SubscribeStore as Shop, StoreSubscription} from '@tinijs/store';
+import {Shop, StoreSubscription} from '@tinijs/store';
 
 import {AppConfigs} from '../app/types';
 import {States, UPDATE_FOO, UPDATE_BAR} from '../app/states';
@@ -18,8 +18,8 @@ import '../components/welcome.component';
 
 @Page('page-home')
 export class PageHome extends TiniComponent {
-  @Shop() shop!: StoreSubscription<States>;
   @UseConfigs() configs!: AppConfigs;
+  @Shop() shop!: StoreSubscription<States>;
   @Inject() sample3Service!: Sample3Service;
 
   @Reactive() foo!: string;

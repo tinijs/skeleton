@@ -6,10 +6,6 @@ import {Sample2Service} from '../services/sample2.service';
 export class PageLazy extends TiniComponent {
   @Inject() sample2Service!: Sample2Service;
 
-  onInit() {
-    console.log(this.sample2Service);
-  }
-
   protected template = html`
     <h1>Me lazy!!!</h1>
     <ul>

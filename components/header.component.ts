@@ -9,7 +9,7 @@ import {
   html,
   css,
 } from '@tinijs/core';
-import {SubscribeStore as Shop, StoreSubscription} from '@tinijs/store';
+import {Shop, StoreSubscription} from '@tinijs/store';
 
 import {States} from '../app/states';
 
