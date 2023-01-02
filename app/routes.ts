@@ -25,4 +25,5 @@ const routes: Route[] = [
 ];
 export default routes;
 
+export type Routes = typeof routes;
 export {Router};

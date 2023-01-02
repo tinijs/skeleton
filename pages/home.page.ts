@@ -2,12 +2,12 @@ import {
   TiniComponent,
   Page,
   UseConfigs,
-  UseService,
+  Inject,
   Reactive,
   html,
   css,
 } from '@tinijs/core';
-import {SubscribeStore, StoreSubscription} from '@tinijs/store';
+import {SubscribeStore as Shop, StoreSubscription} from '@tinijs/store';
 
 import {AppConfigs} from '../app/types';
 import {States, UPDATE_FOO, UPDATE_BAR} from '../app/states';
@@ -18,28 +18,24 @@ import '../components/welcome.component';
 
 @Page('page-home')
 export class PageHome extends TiniComponent {
-  @SubscribeStore() storeSubscription!: StoreSubscription<States>;
-
+  @Shop() shop!: StoreSubscription<States>;
   @UseConfigs() configs!: AppConfigs;
-  @UseService() sample3Service!: Sample3Service;
+  @Inject() sample3Service!: Sample3Service;
 
   @Reactive() foo!: string;
 
   onInit() {
-    this.storeSubscription.subscribe(({foo}) => {
+    this.shop.subscribe(({foo}) => {
       this.foo = foo;
     });
   }
 
   updateFoo() {
-    this.storeSubscription.commit(
-      UPDATE_FOO,
-      'Foo -> ' + Math.round(Math.random() * 100)
-    );
+    this.shop.commit(UPDATE_FOO, 'Foo -> ' + Math.round(Math.random() * 100));
   }
 
   updateBar() {
-    this.storeSubscription.commit(UPDATE_BAR, Math.round(Math.random() * 100));
+    this.shop.commit(UPDATE_BAR, Math.round(Math.random() * 100));
   }
 
   protected template = html`
@@ -50,8 +46,8 @@ export class PageHome extends TiniComponent {
       <button @click="${this.updateBar}">Change bar</button>
     </p>
     <ul>
-      <li>Service: ${this.sample3Service.name}</li>
-      <li>Service: ${this.sample3Service.sample()}</li>
+      <li>Service 3: ${this.sample3Service.name}</li>
+      <li>Service 1 (from Service 3): ${this.sample3Service.sample()}</li>
       <li>Config: ${this.configs.env}</li>
     </ul>
   `;

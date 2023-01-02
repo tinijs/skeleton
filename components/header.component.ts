@@ -1,7 +1,6 @@
 import {
   TiniComponent,
   Component,
-  Input,
   Output,
   EventEmitter,
   Reactive,
@@ -10,15 +9,14 @@ import {
   html,
   css,
 } from '@tinijs/core';
-import {SubscribeStore, StoreSubscription} from '@tinijs/store';
+import {SubscribeStore as Shop, StoreSubscription} from '@tinijs/store';
 
 import {States} from '../app/states';
 
 @Component('app-header')
 export class AppHeader extends TiniComponent {
-  @SubscribeStore() storeSubscription!: StoreSubscription<States>;
+  @Shop() shop!: StoreSubscription<States>;
 
-  @Input() attr?: string;
   @Output() customEvent!: EventEmitter<string>;
 
   @Query('.test') private _testButton!: HTMLElement;
@@ -27,7 +25,7 @@ export class AppHeader extends TiniComponent {
   @Reactive() bar!: number;
 
   onInit() {
-    this.storeSubscription.subscribe(({bar}) => {
+    this.shop.subscribe(({bar}) => {
       this.bar = bar;
     });
   }
@@ -40,7 +38,7 @@ export class AppHeader extends TiniComponent {
 
   protected template = html`
     <header>
-      <div class="left"><h1>Bar #${this.bar} (${this.attr})</h1></div>
+      <div class="left"><h1>Bar #${this.bar}</h1></div>
       <div class="right">
         <ul>
           <li><a href="/">Home</a></li>

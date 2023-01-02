@@ -16,6 +16,8 @@ layouts/*.js
 pages/*.js
 components/*.js
 services/*.js
+helpers/*.js
+consts/*.js
 
 # lib
 public-api.js

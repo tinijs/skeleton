@@ -9,3 +9,5 @@ export class Sample3Service {
     return this.sampleService.name;
   }
 }
+
+export default Sample3Service;

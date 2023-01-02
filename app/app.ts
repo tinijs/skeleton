@@ -1,36 +1,17 @@
-import {
-  App,
-  TiniComponent,
-  APP_ROOT_TEMPLATE,
-  provideServices,
-} from '@tinijs/core';
+import {TiniComponent, App, APP_ROOT_TEMPLATE} from '@tinijs/core';
 import {registerRoutes} from '@tinijs/router';
 import {createStore} from '@tinijs/store';
 
 import configs from '../configs/development';
 import routes, {Router} from './routes';
 import states, {Store} from './states';
+import providers from './providers';
 
-// Lazy DI: provide before and imported conponent
-provideServices({
-  SampleService: {
-    provider: () => import('../services/sample.service'),
-  },
-  Sample2Service: {
-    provider: () => import('../services/sample2.service'),
-  },
-  Sample3Service: {
-    provider: () => import('../services/sample3.service'),
-    deps: ['SampleService'],
-  },
-});
-
-// Entry UI: import preload components
 import '../layouts/default.layout';
 import '../pages/home.page';
 import '../pages/404.page';
 
-@App()
+@App(providers)
 export class AppRoot extends TiniComponent {
   $configs = configs;
   $router!: Router;

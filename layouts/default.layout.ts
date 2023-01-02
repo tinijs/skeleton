@@ -10,10 +10,7 @@ export class LayoutDefault extends TiniComponent {
 
   protected template = html`
     <div class="header">
-      <app-header
-        attr="xxx"
-        @customEvent=${this.handleCustomEvent}
-      ></app-header>
+      <app-header @customEvent=${this.handleCustomEvent}></app-header>
     </div>
     <div class="page"><slot></slot></div>
   `;
