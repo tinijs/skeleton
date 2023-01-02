@@ -15,6 +15,7 @@ import {States, UPDATE_FOO, UPDATE_BAR} from '../app/states';
 import {Sample3Service} from '../services/sample3.service';
 
 import '../components/welcome.component';
+import '../components/ads-02.component';
 
 @Page('page-home')
 export class PageHome extends TiniComponent {
@@ -50,6 +51,10 @@ export class PageHome extends TiniComponent {
       <li>Service 1 (from Service 3): ${this.sample3Service.sample()}</li>
       <li>Config: ${this.configs.env}</li>
     </ul>
+
+    <div style="width: 500px;">
+      <app-ads-02></app-ads-02>
+    </div>
   `;
 
   static styles = css`

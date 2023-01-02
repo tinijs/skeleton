@@ -5,6 +5,14 @@
   "author": "Lam Nhan",
   "homepage": "https://tinijs.lamnhan.com",
   "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "app/index.html",
+  "staticFiles": {
+    "staticPath": "public"
+  },
+  "targets": {
+    "main": false
+  },
   "main": "public-api.js",
   "typings": "public-api.d.ts",
   "files": [
@@ -24,14 +32,6 @@
     "!**/*.ts",
     "**/*.d.ts"
   ],
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "source": ".tinijs/app/index.html",
-  "staticFiles": {
-    "staticPath": "public"
-  },
-  "targets": {
-    "main": false
-  },
   "scripts": {
     "compile": "tsc",
     "dev": "tini dev",
