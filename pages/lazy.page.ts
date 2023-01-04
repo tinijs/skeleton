@@ -15,9 +15,9 @@ export class PageLazy extends TiniComponent {
       <li>Helper 2 (from Service 2): ${this.sample2Service.help()}</li>
     </ul>
 
-    <div style="width: 500px;">
+    <!-- <div style="width: 500px;">
       <app-ads-01></app-ads-01>
-    </div>
+    </div> -->
   `;
 }
 

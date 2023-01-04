@@ -10,9 +10,9 @@ export class Page404 extends TiniComponent {
   protected template = html`
     <h1>Oops, nothing here to see 🫣. [${this.foo}]</h1>
 
-    <div style="width: 500px;">
+    <!-- <div style="width: 500px;">
       <app-reactions></app-reactions>
-    </div>
+    </div> -->
   `;
 }
 

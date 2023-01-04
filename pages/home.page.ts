@@ -52,9 +52,9 @@ export class PageHome extends TiniComponent {
       <li>Config: ${this.configs.env}</li>
     </ul>
 
-    <div style="width: 500px;">
+    <!-- <div style="width: 500px;">
       <app-ads-02></app-ads-02>
-    </div>
+    </div> -->
   `;
 
   static styles = css`
