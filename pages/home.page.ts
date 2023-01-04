@@ -7,7 +7,7 @@ export class PageHome extends TiniComponent {
   protected template = html`<app-welcome></app-welcome>`;
   static styles = css`
     :host {
-      margin: 0;
+      text-align: center;
     }
   `;
 }
