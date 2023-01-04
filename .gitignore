@@ -4,10 +4,9 @@ node_modules/
 
 # parceljs
 .parcel-cache/
-dist/
 
 # tinijs
-.tinijs/
+www/
 
 # app
 app/*.js

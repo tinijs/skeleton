@@ -6,7 +6,6 @@
   "homepage": "https://tinijs.lamnhan.com",
   "license": "MIT",
   "browserslist": "> 0.5%, last 2 versions, not dead",
-  "source": "app/index.html",
   "staticFiles": {
     "staticPath": "public"
   },

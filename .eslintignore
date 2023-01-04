@@ -1,6 +1,3 @@
-# parceljs
-dist/
-
 # tinijs
 vendor/
-.tinijs/
+www/
