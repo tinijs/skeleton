@@ -2,20 +2,28 @@ import {TiniComponent, Component, Query, html, css} from '@tinijs/core';
 
 @Component('app-splash-screen')
 export class SplashscreenComponent extends TiniComponent {
+  @Query('.container') containerEl!: HTMLElement;
   @Query('.foot') footEl!: HTMLElement;
 
   onReady() {
     setTimeout(() => this.footEl.classList.add('too-long'), 7000);
   }
 
+  hide() {
+    this.containerEl.classList.add('exiting');
+    setTimeout(() => this.remove(), 500);
+  }
+
   protected template = html`
-    <div class="body"><img src="../assets/images/logo.svg" /></div>
-    <div class="foot"><span>Still working, please wait! 👌</span></div>
+    <div class="container">
+      <div class="body"><img src="../assets/images/logo.svg" /></div>
+      <div class="foot"><span>Still working, please wait! 👌</span></div>
+    </div>
   `;
 
   static styles = css`
     /* baseline */
-    :host {
+    .container {
       display: block;
       z-index: 999999999;
       position: fixed;
@@ -68,6 +76,10 @@ export class SplashscreenComponent extends TiniComponent {
 
       .foot.too-long {
         opacity: 1;
+      }
+
+      &.exiting {
+        opacity: 0;
       }
     }
     /* animation */

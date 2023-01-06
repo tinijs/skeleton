@@ -40,7 +40,7 @@ export class PageHome extends TiniComponent {
   }
 
   protected template = html`
-    <app-welcome></app-welcome>
+    <app-welcome ?await=${true}></app-welcome>
     <p><strong>${this.foo}</strong></p>
     <p>
       <button @click="${this.updateFoo}">Change foo</button>
@@ -48,13 +48,13 @@ export class PageHome extends TiniComponent {
     </p>
     <ul>
       <li>Service 3: ${this.sample3Service.name}</li>
-      <li>Service 1 (from Service 3): ${this.sample3Service.sample()}</li>
+      <li>Service 1 (from Service 3): ${this.sample3Service.sampleName()}</li>
       <li>Config: ${this.configs.env}</li>
     </ul>
 
-    <!-- <div style="width: 500px;">
-      <app-ads-02></app-ads-02>
-    </div> -->
+    <div style="width: 500px;">
+      <app-ads-02 await></app-ads-02>
+    </div>
   `;
 
   static styles = css`

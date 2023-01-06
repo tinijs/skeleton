@@ -1,4 +1,4 @@
-import {TiniComponent, App, APP_ROOT_TEMPLATE} from '@tinijs/core';
+import {TiniComponent, App, APP_ROOT_TEMPLATE, html} from '@tinijs/core';
 import {registerRoutes} from '@tinijs/router';
 import {createStore} from '@tinijs/store';
 
@@ -7,11 +7,12 @@ import routes, {Router} from './routes';
 import states, {Store} from './states';
 import providers from './providers';
 
+import '../components/splashscreen.component';
 import '../layouts/default.layout';
 import '../pages/home.page';
 import '../pages/404.page';
 
-@App(providers)
+@App(providers, {splashscreen: 'manual'})
 export class AppRoot extends TiniComponent {
   $configs = configs;
   $router!: Router;
@@ -22,9 +23,10 @@ export class AppRoot extends TiniComponent {
     this.$store = createStore(states);
   }
 
-  protected render() {
-    return APP_ROOT_TEMPLATE;
-  }
+  protected template = html`
+    <app-splash-screen></app-splash-screen>
+    ${APP_ROOT_TEMPLATE}
+  `;
 }
 
 declare global {
