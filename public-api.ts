@@ -24,3 +24,4 @@ export * from './components/ads-01.component';
 
 export * from './components/ads-02.component';
 export * from './components/splashscreen.component';
+export * from './components/nav-indicator.component';

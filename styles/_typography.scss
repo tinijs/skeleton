@@ -1,10 +1,10 @@
 * {
-  font-family: var(--app-font-body);
-  font-size: var(--app-size-font);
+  font-family: var(--font-body);
+  font-size: var(--size-font);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--app-font-head);
+  font-family: var(--font-head);
   font-weight: 500;
 }
 
@@ -17,6 +17,6 @@ h2 {
 }
 
 a {
-  color: var(--app-color-primary);
+  color: var(--color-primary);
   text-decoration: none;
 }

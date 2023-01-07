@@ -8,11 +8,12 @@ import states, {Store} from './states';
 import providers from './providers';
 
 import '../components/splashscreen.component';
+import '../components/nav-indicator.component';
 import '../layouts/default.layout';
 import '../pages/home.page';
 import '../pages/404.page';
 
-@App(providers, {splashscreen: 'manual'})
+@App(providers, {splashscreen: 'auto', navIndicator: true})
 export class AppRoot extends TiniComponent {
   $configs = configs;
   $router!: Router;
@@ -24,8 +25,9 @@ export class AppRoot extends TiniComponent {
   }
 
   protected template = html`
-    <app-splash-screen></app-splash-screen>
+    <app-splashscreen></app-splashscreen>
     ${APP_ROOT_TEMPLATE}
+    <app-nav-indicator></app-nav-indicator>
   `;
 }
 

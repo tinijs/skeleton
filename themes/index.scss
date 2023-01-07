@@ -2,6 +2,6 @@
 @import './dark/additional';
 
 body, [data-theme] {
-  background: var(--app-color-background);
-  color: var(--app-color-foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
 }
