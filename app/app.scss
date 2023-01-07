@@ -6,9 +6,10 @@
 /*
  * Global styles
  */
-
-@import '../styles/typography';
-
+ 
 body {
-  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--size-font);
+  background: var(--color-background);
+  color: var(--color-foreground);
 }

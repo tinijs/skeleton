@@ -1,0 +1,21 @@
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+
+  &:hover, &:focus, &:active {
+    color: var(--color-primary-shade);
+    text-decoration: underline;
+    border: none;
+    background: none;
+    outline: 0;
+  }
+
+  &.muted {
+    color: var(--color-foreground);
+
+    &:hover, &:focus, &:active {
+      color: var(--color-foreground-shade);
+      text-decoration: none;
+    }
+  }
+}
