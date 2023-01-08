@@ -8,12 +8,11 @@ import {
   QueryAll,
   html,
   css,
+  unistylus,
 } from '@tinijs/core';
 import {Shop, StoreSubscription} from '@tinijs/store';
 
 import {States} from '../app/states';
-
-import {unistylus} from '../app/test';
 
 @Component('app-header')
 export class AppHeader extends TiniComponent {
@@ -47,7 +46,9 @@ export class AppHeader extends TiniComponent {
           <li><a href="/lazy">Lazy</a></li>
           <li><a href="/xyz">Oops</a></li>
         </ul>
-        <button class="test" @click=${this.emitCustomEvent}>Test</button>
+        <button class="button-primary test" @click=${this.emitCustomEvent}>
+          Test
+        </button>
       </div>
     </header>
   `;
@@ -55,8 +56,8 @@ export class AppHeader extends TiniComponent {
   static styles = [
     unistylus``,
     css`
-      a {
-        color: black;
+      button {
+        font-size: 1rem;
       }
     `,
     css`

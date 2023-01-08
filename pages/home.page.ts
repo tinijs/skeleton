@@ -6,6 +6,7 @@ import {
   Reactive,
   html,
   css,
+  unistylus,
 } from '@tinijs/core';
 import {Shop, StoreSubscription} from '@tinijs/store';
 
@@ -53,28 +54,56 @@ export class PageHome extends TiniComponent {
     </ul>
 
     <div style="width: 500px;">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Foo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bar</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Baz</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="width: 500px;">
       <app-ads-02 await></app-ads-02>
     </div>
   `;
 
-  static styles = css`
-    p {
-      color: blue;
+  static styles = [
+    unistylus``,
+    css`
+      p {
+        color: blue;
 
-      button {
-        color: red;
+        button {
+          color: red;
+        }
       }
-    }
 
-    ul {
-      margin: 0;
-      list-style: none;
+      ul {
+        margin: 0;
+        list-style: none;
 
-      li {
-        color: green;
+        li {
+          color: green;
+        }
       }
-    }
-  `;
+    `,
+  ];
 }
 
 declare global {
