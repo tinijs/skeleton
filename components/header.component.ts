@@ -13,6 +13,8 @@ import {Shop, StoreSubscription} from '@tinijs/store';
 
 import {States} from '../app/states';
 
+import {unistylus} from '../app/test';
+
 @Component('app-header')
 export class AppHeader extends TiniComponent {
   @Shop() shop!: StoreSubscription<States>;
@@ -51,12 +53,12 @@ export class AppHeader extends TiniComponent {
   `;
 
   static styles = [
+    unistylus``,
     css`
       a {
         color: black;
       }
     `,
-    // ...
     css`
       div {
         color: red;
