@@ -11,6 +11,8 @@ const providers = {
   helper1: () => import('../helpers/helper-1.helper'),
   helper2: () => import('../helpers/helper-2.helper'),
 
+  o2a: () => import('@tinijs/useful/services/helper/o2a'),
+
   /*
    * Services
    */
@@ -23,6 +25,8 @@ const providers = {
     provider: () => import('../services/sample3.service'),
     deps: ['sampleService'],
   },
+
+  fetchService: () => import('@tinijs/useful/services/fetch.service'),
 
   /*
    * Vendors

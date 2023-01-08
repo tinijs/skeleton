@@ -42,6 +42,7 @@
     "@tinijs/core": "file:../core/tinijs-core-0.0.1.tgz",
     "@tinijs/router": "file:../router/tinijs-router-0.0.1.tgz",
     "@tinijs/store": "file:../store/tinijs-store-0.0.1.tgz",
+    "@tinijs/useful": "file:../useful/tinijs-useful-0.0.1.tgz",
     "lit": "^2.5.0"
   },
   "devDependencies": {
