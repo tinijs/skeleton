@@ -54,7 +54,10 @@ export class AppHeader extends TiniComponent {
   `;
 
   static styles = [
-    unistylus``,
+    unistylus`
+      badge-danger
+      alert-success
+    `,
     css`
       button {
         font-size: 1rem;
