@@ -1,7 +1,7 @@
 import {TiniComponent, Page, Inject, html} from '@tinijs/core';
 import {O2a} from '@tinijs/useful/services/helper/o2a';
 
-import '../components/reactions.component';
+import '../components/reactions';
 
 @Page('page-404')
 export class Page404 extends TiniComponent {

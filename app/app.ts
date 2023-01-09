@@ -7,11 +7,11 @@ import routes, {Router} from './routes';
 import states, {Store} from './states';
 import providers from './providers';
 
-import '../components/splashscreen.component';
-import '../components/nav-indicator.component';
-import '../layouts/default.layout';
-import '../pages/home.page';
-import '../pages/404.page';
+import '../components/splashscreen';
+import '../components/nav-indicator';
+import '../layouts/default';
+import '../pages/home';
+import '../pages/404';
 
 @App(providers, {splashscreen: 'auto', navIndicator: true})
 export class AppRoot extends TiniComponent {

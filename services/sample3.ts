@@ -1,4 +1,4 @@
-import {SampleService} from './sample.service';
+import {SampleService} from './sample';
 
 export class Sample3Service {
   name = 'Sample3Service';

@@ -13,7 +13,7 @@ const routes: Route[] = [
         path: '/lazy',
         component: 'page-lazy',
         action: async () => {
-          await import('../pages/lazy.page');
+          await import('../pages/lazy');
         },
       },
       {

@@ -3,30 +3,30 @@ const providers = {
   /*
    * Consts
    */
-  foo: () => import('../consts/foo.const'),
+  foo: () => import('../consts/foo'),
 
   /*
    * Helpers
    */
-  helper1: () => import('../helpers/helper-1.helper'),
-  helper2: () => import('../helpers/helper-2.helper'),
+  helper1: () => import('../helpers/helper-1'),
+  helper2: () => import('../helpers/helper-2'),
 
   o2a: () => import('@tinijs/useful/services/helper/o2a'),
 
   /*
    * Services
    */
-  sampleService: () => import('../services/sample.service'),
+  sampleService: () => import('../services/sample'),
   sample2Service: {
-    provider: () => import('../services/sample2.service'),
+    provider: () => import('../services/sample2'),
     deps: ['foo', 'helper2'],
   },
   sample3Service: {
-    provider: () => import('../services/sample3.service'),
+    provider: () => import('../services/sample3'),
     deps: ['sampleService'],
   },
 
-  fetchService: () => import('@tinijs/useful/services/fetch.service'),
+  fetchService: () => import('@tinijs/useful/services/fetch'),
 
   /*
    * Vendors

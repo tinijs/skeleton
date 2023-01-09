@@ -3,25 +3,25 @@ export * from './app/app';
 // ...
 
 // layouts
-export * from './layouts/default.layout';
+export * from './layouts/default';
 // ...
 
 // pages
-export * from './pages/home.page';
+export * from './pages/home';
 // ...
 
 // components
-export * from './components/header.component';
+export * from './components/header';
 // ...
 
 // services
-export * from './services/sample.service';
+export * from './services/sample';
 // ...
 
-export * from './components/reactions.component';
+export * from './components/reactions';
 
-export * from './components/ads-01.component';
+export * from './components/ads-01';
 
-export * from './components/ads-02.component';
-export * from './components/splashscreen.component';
-export * from './components/nav-indicator.component';
+export * from './components/ads-02';
+export * from './components/splashscreen';
+export * from './components/nav-indicator';

@@ -1,9 +1,9 @@
 import {TiniComponent, Page, Inject, html} from '@tinijs/core';
 import {FetchService} from '@tinijs/useful/services/fetch.service';
 
-import {Sample2Service} from '../services/sample2.service';
+import {Sample2Service} from '../services/sample2';
 
-import '../components/ads-01.component';
+import '../components/ads-01';
 
 @Page('page-lazy')
 export class PageLazy extends TiniComponent {

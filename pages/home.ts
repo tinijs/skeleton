@@ -13,10 +13,10 @@ import {Shop, StoreSubscription} from '@tinijs/store';
 import {AppConfigs} from '../app/types';
 import {States, UPDATE_FOO, UPDATE_BAR} from '../app/states';
 
-import {Sample3Service} from '../services/sample3.service';
+import {Sample3Service} from '../services/sample3';
 
-import '../components/welcome.component';
-import '../components/ads-02.component';
+import '../components/welcome';
+import '../components/ads-02';
 
 @Page('page-home')
 export class PageHome extends TiniComponent {

@@ -1,6 +1,6 @@
 import {TiniComponent, Layout, html} from '@tinijs/core';
 
-import '../components/header.component';
+import '../components/header';
 
 @Layout('layout-default')
 export class LayoutDefault extends TiniComponent {

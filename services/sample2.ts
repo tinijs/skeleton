@@ -1,5 +1,5 @@
-import {Helper2} from '../helpers/helper-2.helper';
-import {Foo} from '../consts/foo.const';
+import {Helper2} from '../helpers/helper-2';
+import {Foo} from '../consts/foo';
 
 export class Sample2Service {
   name = 'Sample2Service';
