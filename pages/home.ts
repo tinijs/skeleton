@@ -8,6 +8,7 @@ import {
   css,
   unistylus,
 } from '@tinijs/core';
+import {UseMeta, Meta} from '@tinijs/meta';
 import {Shop, StoreSubscription} from '@tinijs/store';
 
 import {AppConfigs} from '../app/types';
@@ -20,6 +21,7 @@ import '../components/ads-02';
 
 @Page('page-home')
 export class PageHome extends TiniComponent {
+  @UseMeta() meta!: Meta;
   @UseConfigs() configs!: AppConfigs;
   @Shop() shop!: StoreSubscription<States>;
   @Inject() sample3Service!: Sample3Service;
@@ -38,6 +40,10 @@ export class PageHome extends TiniComponent {
 
   updateBar() {
     this.shop.commit(UPDATE_BAR, Math.round(Math.random() * 100));
+  }
+
+  onReady() {
+    this.meta.setHomeMetas();
   }
 
   protected template = html`

@@ -1,10 +1,17 @@
 import {TiniComponent, Page, Inject, html} from '@tinijs/core';
+import {UseMeta, Meta, PageMetas} from '@tinijs/meta';
 import {O2a} from '@tinijs/useful/services/helper/o2a';
 
 import '../components/reactions';
 
+const metas: PageMetas = {
+  title: 'Oops',
+  description: 'Error 404, not found!',
+};
+
 @Page('page-404')
 export class Page404 extends TiniComponent {
+  @UseMeta() meta!: Meta;
   @Inject() o2a!: O2a;
 
   @Inject() foo!: string;
@@ -17,6 +24,10 @@ export class Page404 extends TiniComponent {
       'item-3': {id: 3, title: 'Item 3'},
     };
     console.log(this.o2a(obj));
+  }
+
+  onReady() {
+    this.meta.setPageMetas(metas);
   }
 
   protected template = html`

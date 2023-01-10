@@ -1,12 +1,19 @@
 import {TiniComponent, Page, Inject, html} from '@tinijs/core';
-import {FetchService} from '@tinijs/useful/services/fetch.service';
+import {UseMeta, Meta, PageMetas} from '@tinijs/meta';
+import {FetchService} from '@tinijs/useful/services/fetch';
 
 import {Sample2Service} from '../services/sample2';
 
 import '../components/ads-01';
 
+const metas: PageMetas = {
+  title: 'Me Lazy',
+  description: 'This page is lazy loaded.',
+};
+
 @Page('page-lazy')
 export class PageLazy extends TiniComponent {
+  @UseMeta() meta!: Meta;
   @Inject() fetchService!: FetchService;
   @Inject() sample2Service!: Sample2Service;
 
@@ -16,6 +23,10 @@ export class PageLazy extends TiniComponent {
       .then(data => {
         console.log(data);
       });
+  }
+
+  onReady() {
+    this.meta.setPageMetas(metas);
   }
 
   protected template = html`
