@@ -1,10 +1,6 @@
-import {precacheAndRoute, self} from '@tinijs/pwa';
-
 /*
- * Precaching (the glob patterns are defined in "../build-sw.js")
- */
-precacheAndRoute(self.__WB_MANIFEST);
-
-/*
- * Custom (advanced use cases)
+ * Precaching instruction will be injected here automatically
+ * Please see the "globPatterns" field in the "tini.config.json"
+ * ==========================================================================
+ * You can also add your own Service Worker code below for advanced use cases
  */

@@ -1,4 +1,15 @@
 {
   "out": "www",
-  "pwa": true
+  "pwa": {
+    "globPatterns": [
+      "**/*.html",
+      "**/*.css",
+      "**/*.js",
+      "**/*.ico",
+      "**/*.jpg",
+      "**/*.png",
+      "**/*.webp",
+      "**/*.svg"
+    ]
+  }
 }
