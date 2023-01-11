@@ -1,4 +1,4 @@
-import {Route, Router} from '@tinijs/router';
+import {Route} from '@tinijs/router';
 
 const routes: Route[] = [
   {
@@ -23,7 +23,6 @@ const routes: Route[] = [
     ],
   },
 ];
-export default routes;
 
+export default routes;
 export type Routes = typeof routes;
-export {Router};

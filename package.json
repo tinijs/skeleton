@@ -1,9 +1,9 @@
 {
   "name": "app",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "The base structure of a TiniJS app/lib.",
-  "author": "Lam Nhan",
-  "homepage": "https://tinijs.lamnhan.com",
+  "author": "TiniJS",
+  "homepage": "https://tinijs.dev",
   "license": "MIT",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "targets": {
