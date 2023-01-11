@@ -1,4 +1,4 @@
-import {Route, Router} from '@tinijs/router';
+import {Route} from '@tinijs/router';
 
 const routes: Route[] = [
   {
@@ -10,20 +10,12 @@ const routes: Route[] = [
         component: 'page-home',
       },
       {
-        path: '/lazy',
-        component: 'page-lazy',
-        action: async () => {
-          await import('../pages/lazy');
-        },
-      },
-      {
         path: '(.*)',
         component: 'page-404',
       },
     ],
   },
 ];
-export default routes;
 
+export default routes;
 export type Routes = typeof routes;
-export {Router};

@@ -1,16 +1,14 @@
 import {TiniComponent, App, APP_ROOT_TEMPLATE, html} from '@tinijs/core';
 import {initMetas, Meta} from '@tinijs/meta';
-import {registerRoutes} from '@tinijs/router';
+import {registerRoutes, Router} from '@tinijs/router';
 import {createStore} from '@tinijs/store';
 
 import configs from '../configs/development';
-import {suffix, suffixTranslations, metas, metasTranslations} from './metas';
-import routes, {Router} from './routes';
+import {metas} from './metas';
+import routes from './routes';
 import states, {Store} from './states';
 import providers from './providers';
 
-import '../components/splashscreen';
-import '../components/nav-indicator';
 import '../layouts/default';
 import '../pages/home';
 import '../pages/404';
@@ -23,21 +21,12 @@ export class AppRoot extends TiniComponent {
   $store!: Store;
 
   onReady() {
-    this.$meta = initMetas({
-      suffix,
-      suffixTranslations,
-      metas,
-      metasTranslations,
-    });
+    this.$meta = initMetas({metas});
     this.$router = registerRoutes(routes);
     this.$store = createStore(states);
   }
 
-  protected template = html`
-    <app-splashscreen></app-splashscreen>
-    ${APP_ROOT_TEMPLATE}
-    <app-nav-indicator></app-nav-indicator>
-  `;
+  protected template = html`${APP_ROOT_TEMPLATE}`;
 }
 
 declare global {

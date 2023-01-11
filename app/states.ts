@@ -1,18 +1,9 @@
-import {Store as AppStore, Transaction, MutationToolbox} from '@tinijs/store';
+import {Store as TiniStore} from '@tinijs/store';
 
 const states = {
-  foo: 'Foo -> 0',
-  bar: 0,
+  key: 'value',
 };
+
 export default states;
-
-export const UPDATE_FOO = function (foo: string) {
-  return ({update}: MutationToolbox) => update('foo', () => foo);
-} as Transaction;
-
-export const UPDATE_BAR = function (bar: number) {
-  return ({update}: MutationToolbox) => update('bar', () => bar);
-} as Transaction;
-
 export type States = typeof states;
-export type Store = AppStore<States>;
+export type Store = TiniStore<States>;

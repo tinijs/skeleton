@@ -1,3 +1,3 @@
 export default {
-  env: 'Prod',
+  env: 'production',
 };
