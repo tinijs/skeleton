@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "The base structure of a TiniJS app/lib.",
   "author": "Lam Nhan",
   "homepage": "https://tinijs.lamnhan.com",
@@ -39,29 +39,17 @@
     "ci": "npm run lint && npm run test && npm run build && npm run build:lib"
   },
   "dependencies": {
-    "@tinijs/core": "file:../core/tinijs-core-0.0.1.tgz",
-    "@tinijs/meta": "file:../meta/tinijs-meta-0.0.1.tgz",
-    "@tinijs/pwa": "file:../pwa/tinijs-pwa-0.0.1.tgz",
-    "@tinijs/router": "file:../router/tinijs-router-0.0.1.tgz",
-    "@tinijs/store": "file:../store/tinijs-store-0.0.1.tgz",
-    "@tinijs/useful": "file:../useful/tinijs-useful-0.0.1.tgz",
-    "lit": "^2.5.0"
+    "@tinijs/core": "0.0.2",
+    "@tinijs/meta": "0.0.2",
+    "@tinijs/pwa": "0.0.2",
+    "@tinijs/router": "0.0.2",
+    "@tinijs/store": "0.0.2",
+    "@tinijs/useful": "0.0.2",
+    "lit": "^2.6.0"
   },
   "devDependencies": {
-    "@tinijs/cli": "file:../cli/tinijs-cli-0.0.1.tgz",
-    "@tinijs/parcel-transformer-default": "file:../parcel-transformer-default/tinijs-parcel-transformer-default-0.0.1.tgz",
-    "assert": "^2.0.0",
-    "constants-browserify": "^1.0.0",
-    "crypto-browserify": "^3.12.0",
-    "events": "^3.3.0",
+    "@tinijs/cli": "^0.0.2",
     "gts": "^4.0.0",
-    "os-browserify": "^0.3.0",
-    "path-browserify": "^1.0.1",
-    "process": "^0.11.10",
-    "punycode": "^1.4.1",
-    "stream-browserify": "^3.0.0",
-    "typescript": "~4.7.0",
-    "url": "^0.11.0",
-    "util": "^0.12.5"
+    "typescript": "~4.9.4"
   }
 }
