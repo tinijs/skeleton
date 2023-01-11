@@ -41,10 +41,8 @@
   "dependencies": {
     "@tinijs/core": "0.0.2",
     "@tinijs/meta": "0.0.2",
-    "@tinijs/pwa": "0.0.2",
     "@tinijs/router": "0.0.2",
     "@tinijs/store": "0.0.2",
-    "@tinijs/useful": "0.0.2",
     "lit": "^2.6.0"
   },
   "devDependencies": {
