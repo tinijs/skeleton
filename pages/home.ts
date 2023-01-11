@@ -10,6 +10,7 @@ import {
 } from '@tinijs/core';
 import {UseMeta, Meta} from '@tinijs/meta';
 import {Shop, StoreSubscription} from '@tinijs/store';
+import {UseWorkbox, Workbox} from '@tinijs/pwa';
 
 import {AppConfigs} from '../app/types';
 import {States, UPDATE_FOO, UPDATE_BAR} from '../app/states';
@@ -21,6 +22,7 @@ import '../components/ads-02';
 
 @Page('page-home')
 export class PageHome extends TiniComponent {
+  @UseWorkbox() workbox!: Workbox;
   @UseMeta() meta!: Meta;
   @UseConfigs() configs!: AppConfigs;
   @Shop() shop!: StoreSubscription<States>;
@@ -44,6 +46,7 @@ export class PageHome extends TiniComponent {
 
   onReady() {
     this.meta.setHomeMetas();
+    console.log(this.workbox);
   }
 
   protected template = html`

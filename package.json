@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "@tinijs/cli": "file:../cli/tinijs-cli-0.0.1.tgz",
+    "@tinijs/parcel-transformer-default": "file:../parcel-transformer-default/tinijs-parcel-transformer-default-0.0.1.tgz",
     "assert": "^2.0.0",
     "constants-browserify": "^1.0.0",
     "crypto-browserify": "^3.12.0",
