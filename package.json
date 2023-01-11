@@ -39,7 +39,7 @@
     "ci": "npm run lint && npm run test && npm run build && npm run build:lib"
   },
   "dependencies": {
-    "@tinijs/core": "0.0.2",
+    "@tinijs/core": "file:../core/tinijs-core-0.0.3.tgz",
     "@tinijs/meta": "0.0.2",
     "@tinijs/pwa": "0.0.2",
     "@tinijs/router": "0.0.2",
