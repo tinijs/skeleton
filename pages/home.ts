@@ -1,4 +1,4 @@
-import {TiniComponent, Page, html, css} from '@tinijs/core';
+import {TiniComponent, Page, html, css, unistylus} from '@tinijs/core';
 import {UseMeta, Meta} from '@tinijs/meta';
 
 import '../components/welcome';
@@ -13,11 +13,14 @@ export class PageHome extends TiniComponent {
 
   protected template = html`<app-welcome></app-welcome>`;
 
-  static styles = css`
-    :host {
-      text-align: center;
-    }
-  `;
+  static styles = [
+    unistylus``,
+    css`
+      :host {
+        text-align: center;
+      }
+    `,
+  ];
 }
 
 declare global {
