@@ -22,7 +22,7 @@ export class NavIndicatorComponent extends TiniComponent {
   protected template = html`
     <div class=${classMap({subhost: true, active: this.active})}>
       <div class="body" @click=${this.hide}>
-        <img src="../assets/images/logo.svg" />
+        <img src="../assets/logo.svg" />
         <span>Loading, please wait!</span>
       </div>
     </div>

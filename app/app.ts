@@ -1,11 +1,11 @@
 import {TiniComponent, App, APP_ROOT_TEMPLATE, html} from '@tinijs/core';
 import {initMetas, Meta} from '@tinijs/meta';
-import {registerRoutes} from '@tinijs/router';
+import {registerRoutes, Router} from '@tinijs/router';
 import {createStore} from '@tinijs/store';
 
 import configs from '../configs/development';
 import {suffix, suffixTranslations, metas, metasTranslations} from './metas';
-import routes, {Router} from './routes';
+import routes from './routes';
 import states, {Store} from './states';
 import providers from './providers';
 

@@ -10,13 +10,13 @@ import {
   css,
   unistylus,
 } from '@tinijs/core';
-import {Shop, StoreSubscription} from '@tinijs/store';
+import {SubscribeStore, StoreSubscription} from '@tinijs/store';
 
 import {States} from '../app/states';
 
 @Component('app-header')
 export class AppHeader extends TiniComponent {
-  @Shop() shop!: StoreSubscription<States>;
+  @SubscribeStore() shop!: StoreSubscription<States>;
 
   @Output() customEvent!: EventEmitter<string>;
 

@@ -6,10 +6,11 @@ import {
   Reactive,
   html,
   css,
+  unsafeCSS,
   unistylus,
 } from '@tinijs/core';
 import {UseMeta, Meta} from '@tinijs/meta';
-import {Shop, StoreSubscription} from '@tinijs/store';
+import {SubscribeStore, StoreSubscription} from '@tinijs/store';
 import {UseWorkbox, Workbox} from '@tinijs/pwa';
 
 import {AppConfigs} from '../app/types';
@@ -20,12 +21,20 @@ import {Sample3Service} from '../services/sample3';
 import '../components/welcome';
 import '../components/ads-02';
 
+const style1 = css`
+  a {
+    color: red;
+  }
+`;
+
+const style2 = unsafeCSS(0);
+
 @Page('page-home')
 export class PageHome extends TiniComponent {
   @UseWorkbox() workbox!: Workbox;
   @UseMeta() meta!: Meta;
   @UseConfigs() configs!: AppConfigs;
-  @Shop() shop!: StoreSubscription<States>;
+  @SubscribeStore() shop!: StoreSubscription<States>;
   @Inject() sample3Service!: Sample3Service;
 
   @Reactive() foo!: string;
@@ -49,6 +58,10 @@ export class PageHome extends TiniComponent {
     console.log(this.workbox);
   }
 
+  test1 = html`<h1>Test 1</h1>`;
+
+  test2 = html`<h1>Test 2</h1>`;
+
   protected template = html`
     <app-welcome ?await=${true}></app-welcome>
     <p><strong>${this.foo}</strong></p>
@@ -59,7 +72,7 @@ export class PageHome extends TiniComponent {
     <ul>
       <li>Service 3: ${this.sample3Service.name}</li>
       <li>Service 1 (from Service 3): ${this.sample3Service.sampleName()}</li>
-      <li>Config: ${this.configs.env}</li>
+      <li>Config: ${html`<strong>${this.configs.env}</strong>`}</li>
     </ul>
 
     <div style="width: 500px;">
@@ -105,10 +118,11 @@ export class PageHome extends TiniComponent {
 
       ul {
         margin: 0;
-        list-style: none;
+        list-style: '';
 
         li {
           color: green;
+          margin-right: 0;
         }
       }
     `,

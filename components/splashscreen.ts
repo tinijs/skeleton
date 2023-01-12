@@ -23,7 +23,7 @@ export class SplashscreenComponent extends TiniComponent {
 
   protected template = html`
     <div class="subhost ${classMap({exiting: this.exiting})}">
-      <div class="body"><img src="../assets/images/logo.svg" /></div>
+      <div class="body"><img src="../assets/logo.svg" /></div>
       <div class="foot ${classMap({'too-long': this.tooLong})}">
         <span>Still working, please wait! 👌</span>
       </div>

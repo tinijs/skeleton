@@ -1,4 +1,4 @@
-import {TiniComponent, Page, Inject, html} from '@tinijs/core';
+import {TiniComponent, Page, Inject, html, css} from '@tinijs/core';
 import {UseMeta, Meta, PageMetas} from '@tinijs/meta';
 import {O2a} from '@tinijs/useful/services/helper/o2a';
 
@@ -30,13 +30,24 @@ export class Page404 extends TiniComponent {
     this.meta.setPageMetas(metas);
   }
 
-  protected template = html`
-    <h1>Oops, nothing here to see 🫣. [${this.foo}]</h1>
+  protected render() {
+    return html`
+      <h1>Oops, nothing here to see 🫣. [${this.foo}]</h1>
+      <div style="width: 500px;">
+        <app-reactions></app-reactions>
+      </div>
+    `;
+  }
 
-    <div style="width: 500px;">
-      <app-reactions></app-reactions>
-    </div>
-  `;
+  protected styling() {
+    return [
+      css`
+        h1 {
+          color: red;
+        }
+      `,
+    ];
+  }
 }
 
 declare global {
