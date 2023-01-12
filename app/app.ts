@@ -4,16 +4,16 @@ import {registerRoutes, Router} from '@tinijs/router';
 import {createStore} from '@tinijs/store';
 
 import configs from '../configs/development';
-import {metas} from './metas';
-import routes from './routes';
-import states, {Store} from './states';
 import providers from './providers';
+import routes from './routes';
+import {metas} from './metas';
+import states, {Store} from './states';
 
 import '../layouts/default';
 import '../pages/home';
 import '../pages/404';
 
-@App(providers, {splashscreen: 'auto', navIndicator: true})
+@App(providers)
 export class AppRoot extends TiniComponent {
   $configs = configs;
   $meta!: Meta;
