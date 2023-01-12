@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The base structure of a TiniJS app/lib.",
   "author": "TiniJS",
   "homepage": "https://tinijs.dev",
@@ -39,14 +39,14 @@
     "ci": "npm run lint && npm run test && npm run build && npm run build:lib"
   },
   "dependencies": {
-    "@tinijs/core": "0.0.2",
-    "@tinijs/meta": "0.0.2",
-    "@tinijs/router": "0.0.2",
-    "@tinijs/store": "0.0.2",
+    "@tinijs/core": "0.0.3",
+    "@tinijs/meta": "0.0.3",
+    "@tinijs/router": "0.0.3",
+    "@tinijs/store": "0.0.3",
     "lit": "^2.6.0"
   },
   "devDependencies": {
-    "@tinijs/cli": "^0.0.2",
+    "@tinijs/cli": "^0.0.3",
     "gts": "^4.0.0",
     "typescript": "~4.9.4"
   }
