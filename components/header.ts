@@ -16,7 +16,7 @@ import {States} from '../app/states';
 
 @Component('app-header')
 export class AppHeader extends TiniComponent {
-  @SubscribeStore() shop!: StoreSubscription<States>;
+  @SubscribeStore() store!: StoreSubscription<States>;
 
   @Output() customEvent!: EventEmitter<string>;
 
@@ -26,7 +26,7 @@ export class AppHeader extends TiniComponent {
   @Reactive() bar!: number;
 
   onInit() {
-    this.shop.subscribe(({bar}) => {
+    this.store.subscribe(({bar}) => {
       this.bar = bar;
     });
   }

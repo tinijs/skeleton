@@ -34,23 +34,23 @@ export class PageHome extends TiniComponent {
   @UseWorkbox() workbox!: Workbox;
   @UseMeta() meta!: Meta;
   @UseConfigs() configs!: AppConfigs;
-  @SubscribeStore() shop!: StoreSubscription<States>;
+  @SubscribeStore() store!: StoreSubscription<States>;
   @Inject() sample3Service!: Sample3Service;
 
   @Reactive() foo!: string;
 
   onInit() {
-    this.shop.subscribe(({foo}) => {
+    this.store.subscribe(({foo}) => {
       this.foo = foo;
     });
   }
 
   updateFoo() {
-    this.shop.commit(UPDATE_FOO, 'Foo -> ' + Math.round(Math.random() * 100));
+    this.store.commit(UPDATE_FOO, 'Foo -> ' + Math.round(Math.random() * 100));
   }
 
   updateBar() {
-    this.shop.commit(UPDATE_BAR, Math.round(Math.random() * 100));
+    this.store.commit(UPDATE_BAR, Math.round(Math.random() * 100));
   }
 
   onReady() {
