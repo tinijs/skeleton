@@ -26,11 +26,7 @@ export class AppRoot extends TiniComponent {
     this.$store = createStore(states);
   }
 
-  protected template = html`${APP_ROOT_TEMPLATE}`;
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'app-root': AppRoot;
+  protected render() {
+    return html`${APP_ROOT_TEMPLATE}`;
   }
 }
