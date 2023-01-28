@@ -1,5 +1,3 @@
-import {Route} from '@tinijs/router';
-
 const routes: Route[] = [
   {
     path: '',
@@ -11,7 +9,7 @@ const routes: Route[] = [
       },
       {
         path: '(.*)',
-        component: 'page-404',
+        component: 'page-oops',
       },
     ],
   },

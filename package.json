@@ -39,14 +39,14 @@
     "ci": "npm run lint && npm run test && npm run build && npm run build:lib"
   },
   "dependencies": {
-    "@tinijs/core": "0.0.3",
-    "@tinijs/meta": "0.0.3",
-    "@tinijs/router": "0.0.3",
-    "@tinijs/store": "0.0.3",
+    "@tinijs/core": "file:../core/tinijs-core-0.0.3.tgz",
+    "@tinijs/meta": "file:../meta/tinijs-meta-0.0.3.tgz",
+    "@tinijs/router": "file:../router/tinijs-router-0.0.3.tgz",
+    "@tinijs/store": "file:../store/tinijs-store-0.0.3.tgz",
     "lit": "^2.6.0"
   },
   "devDependencies": {
-    "@tinijs/cli": "^0.0.3",
+    "@tinijs/cli": "file:../cli/tinijs-cli-0.0.3.tgz",
     "gts": "^4.0.0",
     "typescript": "~4.9.4"
   }

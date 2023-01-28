@@ -1,8 +1,3 @@
-import {TiniComponent, App, APP_ROOT_TEMPLATE, html} from '@tinijs/core';
-import {initMetas, Meta} from '@tinijs/meta';
-import {registerRoutes, Router} from '@tinijs/router';
-import {createStore} from '@tinijs/store';
-
 import configs from '../configs/development';
 import providers from './providers';
 import routes from './routes';
@@ -11,7 +6,7 @@ import states, {Store} from './states';
 
 import '../layouts/default';
 import '../pages/home';
-import '../pages/404';
+import '../pages/oops';
 
 @App(providers)
 export class AppRoot extends TiniComponent {

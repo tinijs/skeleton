@@ -10,6 +10,6 @@ export class HomePage extends TiniComponent {
   ];
 
   protected render() {
-    html`<app-welcome></app-welcome>`;
+    return html`<app-welcome></app-welcome>`;
   }
 }
