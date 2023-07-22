@@ -1,14 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 const providers = {
   /*
-   * Consts
-   */
-  // ...
-  /*
-   * Helpers
-   */
-  // ...
-  /*
    * Services
    */
   // ...
