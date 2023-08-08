@@ -26,7 +26,7 @@ Or, manually:
 To access the app from other devices on the same network:
 
 - Run `ifconfig` to retrieve the IP of the host machine.
-- Preview the app: `192.168.1.XXX:8080`
+- Preview the app: `192.168.1.XXX:3000`
 
 ## Developement
 

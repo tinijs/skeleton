@@ -1,2 +1,4 @@
+import {AppMetas} from '@tinijs/meta';
+
 // null = use the extracted values from app.html
-export const metas = null as unknown as AppMetas;
+export default null as unknown as AppMetas;

@@ -6,21 +6,9 @@ node_modules/
 .parcel-cache/
 
 # tinijs
-.tini/
+.tini-app/
 www/
 
 # app
-app/*.js
-configs/*.js
-layouts/*.js
-pages/*.js
-components/*.js
-services/*.js
-helpers/*.js
-consts/*.js
-
-# lib
-public-api.js
-*.map
-*.d.ts
-*.tgz
+app/**/*.js
+!app/vendor/**/*.js

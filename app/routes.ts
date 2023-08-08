@@ -1,19 +1,21 @@
-const routes: Route[] = [
+import {Route} from '@tinijs/router';
+
+export default [
   {
     path: '',
-    component: 'layout-default',
+    component: 'app-layout-default',
     children: [
       {
         path: '',
-        component: 'page-home',
+        component: 'app-page-home',
+        action: () => import('./pages/home'),
       },
+      // 404
       {
-        path: '(.*)',
-        component: 'page-oops',
+        path: '**',
+        component: 'app-page-404',
+        action: () => import('./pages/404'),
       },
     ],
   },
-];
-
-export default routes;
-export type Routes = typeof routes;
+] as Route[];

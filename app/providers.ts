@@ -1,15 +1,15 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-const providers = {
+import {DependencyProviders} from '@tinijs/core';
+
+export default {
   /*
    * Services
    */
+
   // ...
+
   /*
    * Vendors
    */
-  //@ts-ignore
-  // ...
-};
 
-export default providers;
-export type Providers = typeof providers;
+  // ...
+} as DependencyProviders;

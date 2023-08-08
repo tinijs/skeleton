@@ -1,4 +1,4 @@
 # tinijs
 .tini/
-vendor/
+app/vendor/
 www/
