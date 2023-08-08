@@ -4,12 +4,9 @@ export default {
   /*
    * Services
    */
-
   // ...
-
   /*
    * Vendors
    */
-
   // ...
 } as DependencyProviders;

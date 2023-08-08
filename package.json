@@ -15,15 +15,16 @@
     "fix": "gts fix"
   },
   "dependencies": {
-    "@tinijs/core": "file:../core/tinijs-core-0.1.0.tgz",
-    "@tinijs/meta": "file:../meta/tinijs-meta-0.1.0.tgz",
-    "@tinijs/router": "file:../router/tinijs-router-0.1.0.tgz",
-    "@tinijs/store": "file:../store/tinijs-store-0.1.0.tgz",
+    "@tinijs/core": "^0.1.0",
+    "@tinijs/meta": "^0.1.0",
+    "@tinijs/router": "^0.1.0",
+    "@tinijs/store": "^0.1.0",
     "lit": "^3.0.0-pre.0"
   },
   "devDependencies": {
-    "@tinijs/cli": "file:../cli/tinijs-cli-0.1.0.tgz",
-    "gts": "^4.0.1",
+    "@tinijs/cli": "^0.1.0",
+    "@tinijs/ui-bootstrap": "^0.0.1",
+    "gts": "^5.0.0",
     "typescript": "~5.1.6"
   }
 }

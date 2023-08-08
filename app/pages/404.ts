@@ -2,7 +2,7 @@ import {Page, TiniComponent, html} from '@tinijs/core';
 import {PageMetas} from '@tinijs/meta';
 
 @Page({
-  name: 'app-page-404'
+  name: 'app-page-404',
 })
 export class AppPage404 extends TiniComponent {
   readonly metas: PageMetas = {
