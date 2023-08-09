@@ -19,11 +19,13 @@
     "@tinijs/meta": "^0.1.0",
     "@tinijs/router": "^0.1.0",
     "@tinijs/store": "^0.1.0",
+    "@tinijs/ui": "^0.0.1",
+    "@tinijs/ui-bootstrap": "^0.0.1",
+    "@tinijs/ui-common": "^0.0.1",
     "lit": "^3.0.0-pre.0"
   },
   "devDependencies": {
     "@tinijs/cli": "^0.1.0",
-    "@tinijs/ui-bootstrap": "^0.0.1",
     "gts": "^5.0.0",
     "typescript": "~5.1.6"
   }

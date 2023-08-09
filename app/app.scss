@@ -2,17 +2,8 @@
  * Skins and utils
  */
 
-@import '../node_modules/@tinijs/ui-bootstrap/styles/skins/light.css';
-@import '../node_modules/@tinijs/ui-bootstrap/skin-utils.css';
+@import '../node_modules/@tinijs/ui/skins.css';
 
 /*
  * Global styles
  */
-
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: var(--size-text);
-  background: var(--color-background);
-  color: var(--color-foreground);
-}
