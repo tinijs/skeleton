@@ -8,9 +8,7 @@ You can create an app automatically with the help of the CLI or manually creatin
 
 Using the CLI (recommended):
 
-- Install the CLI: `npm i -g @tinijs/cli`
-- Run: `tini new <name>`
-- Start develop: `cd <name>`
+`npx @tinijs/cli new my-app --latest`
 
 Or, manually:
 
