@@ -1,4 +1,5 @@
-import {Layout, TiniComponent, html} from '@tinijs/core';
+import {html} from 'lit';
+import {Layout, TiniComponent} from '@tinijs/core';
 
 @Layout({
   name: 'app-layout-default',

@@ -15,7 +15,7 @@
     "fix": "gts fix"
   },
   "dependencies": {
-    "@tinijs/core": "^0.6.0",
+    "@tinijs/core": "file:../core/tinijs-core-0.6.0.tgz",
     "@tinijs/meta": "^0.6.0",
     "@tinijs/router": "^0.6.0",
     "@tinijs/store": "^0.6.0",

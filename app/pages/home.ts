@@ -1,4 +1,5 @@
-import {Page, TiniComponent, html, css} from '@tinijs/core';
+import {html, css} from 'lit';
+import {Page, TiniComponent} from '@tinijs/core';
 
 import {AppWelcomeComponent} from '../components/welcome';
 

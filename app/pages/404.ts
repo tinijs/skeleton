@@ -1,4 +1,5 @@
-import {Page, TiniComponent, html} from '@tinijs/core';
+import {html} from 'lit';
+import {Page, TiniComponent} from '@tinijs/core';
 import {PageMetas} from '@tinijs/meta';
 
 @Page({

@@ -1,4 +1,5 @@
-import {App, TiniComponent, html} from '@tinijs/core';
+import {html} from 'lit';
+import {App, TiniComponent} from '@tinijs/core';
 import {createRouter} from '@tinijs/router';
 import {initMetas} from '@tinijs/meta';
 
