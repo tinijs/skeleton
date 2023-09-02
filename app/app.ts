@@ -6,17 +6,16 @@ import {initMetas} from '@tinijs/meta';
 import configs from './configs/development';
 import metas from './metas';
 import routes from './routes';
-import providers from './providers';
 
 import './layouts/default';
 
-@App({providers})
+@App()
 export class AppRoot extends TiniComponent {
-  public readonly $configs = configs;
-  public readonly $meta = initMetas({metas});
-  public readonly $router = createRouter(routes, {linkTrigger: true});
+  public readonly configs = configs;
+  public readonly meta = initMetas({metas});
+  public readonly router = createRouter(routes, {linkTrigger: true});
 
   protected render() {
-    return html`<router-outlet .router=${this.$router}></router-outlet>`;
+    return html`<router-outlet .router=${this.router}></router-outlet>`;
   }
 }
