@@ -1,6 +1,6 @@
 {
   "name": "tini-app",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "The base structure of a TiniJS app.",
   "author": "Lam Nhan",
   "homepage": "https://tinijs.dev",
@@ -15,17 +15,17 @@
     "fix": "gts fix"
   },
   "dependencies": {
-    "@tinijs/core": "file:../core",
-    "@tinijs/meta": "file:../meta",
-    "@tinijs/router": "file:../router",
-    "@tinijs/store": "file:../store",
-    "@tinijs/ui": "file:../ui/build/@tinijs/ui/tinijs-ui-0.8.0.tgz",
-    "@tinijs/ui-bootstrap": "file:../ui/build/@tinijs/ui-bootstrap/tinijs-ui-bootstrap-0.8.0.tgz",
-    "@tinijs/ui-common": "file:../ui/build/@tinijs/ui-common/tinijs-ui-common-0.8.0.tgz",
+    "@tinijs/core": "^0.9.0",
+    "@tinijs/meta": "^0.9.0",
+    "@tinijs/router": "^0.9.0",
+    "@tinijs/store": "^0.9.0",
+    "@tinijs/ui": "^0.9.0",
+    "@tinijs/ui-bootstrap": "^0.9.0",
+    "@tinijs/ui-common": "^0.9.0",
     "lit": "^3.0.0-pre.0"
   },
   "devDependencies": {
-    "@tinijs/cli": "file:../cli/tinijs-cli-0.8.0.tgz",
+    "@tinijs/cli": "^0.9.0",
     "gts": "^5.0.0",
     "typescript": "~5.1.6"
   }
