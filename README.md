@@ -30,7 +30,7 @@ To access the app from other devices on the same network:
 
 - Create a home for TiniJS: `mkdir TiniJS && cd TiniJS`
 - Install the CLI: `npm i -g @tinijs/cli`
-- Fork the repo: `git clone https://github.com/tinijs/skeleton.git`
+- Fork the repo
 - Install dependencies: `cd skeleton && npm i`
 - Make changes & preview: `npm run dev`
 - Push changes & create a PR 👌
