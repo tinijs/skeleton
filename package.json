@@ -15,17 +15,17 @@
     "fix": "gts fix"
   },
   "dependencies": {
-    "@tinijs/core": "^0.13.0",
-    "@tinijs/meta": "^0.13.0",
-    "@tinijs/router": "^0.13.0",
-    "@tinijs/store": "^0.13.0",
-    "@tinijs/ui": "^0.13.0",
-    "@tinijs/ui-bootstrap": "^0.13.0",
-    "@tinijs/ui-common": "^0.13.0",
+    "@tinijs/core": "file:../core/tinijs-core-0.13.0.tgz",
+    "@tinijs/meta": "file:../meta/tinijs-meta-0.13.0.tgz",
+    "@tinijs/router": "file:../router/tinijs-router-0.13.0.tgz",
+    "@tinijs/store": "file:../store/tinijs-store-0.13.0.tgz",
+    "@tinijs/ui": "file:../ui/build/@tinijs/ui/tinijs-ui-0.13.2.tgz",
+    "@tinijs/ui-bootstrap": "file:../ui/build/@tinijs/ui-bootstrap/tinijs-ui-bootstrap-0.13.2.tgz",
+    "@tinijs/ui-common": "file:../ui/build/@tinijs/ui-common/tinijs-ui-common-0.13.2.tgz",
     "lit": "^3.1.0"
   },
   "devDependencies": {
-    "@tinijs/cli": "^0.13.0",
+    "@tinijs/cli": "file:../cli/tinijs-cli-0.13.0.tgz",
     "gts": "^5.2.0",
     "typescript": "~5.3.2"
   }
