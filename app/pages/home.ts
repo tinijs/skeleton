@@ -8,13 +8,13 @@ import {AppWelcomeComponent} from '../components/welcome';
   components: [AppWelcomeComponent],
 })
 export class AppPageHome extends TiniComponent {
+  protected render() {
+    return html`<app-welcome></app-welcome>`;
+  }
+
   static styles = css`
     :host {
       text-align: center;
     }
   `;
-
-  protected render() {
-    return html`<app-welcome></app-welcome>`;
-  }
 }
