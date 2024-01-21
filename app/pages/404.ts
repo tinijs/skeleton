@@ -1,4 +1,5 @@
 import {html} from 'lit';
+
 import {Page, TiniComponent} from '@tinijs/core';
 import {PageWithMetas, PageMetas} from '@tinijs/meta';
 

@@ -1,4 +1,5 @@
 import {html} from 'lit';
+
 import {
   App,
   TiniComponent,
@@ -9,9 +10,10 @@ import {createRouter, AppWithRouter} from '@tinijs/router';
 import {initMeta, AppWithMeta} from '@tinijs/meta';
 
 import {AppConfigs} from './types/common';
+
 import configs from './configs/development';
-import metas from './metas';
 import routes from './routes';
+import metas from './metas';
 
 import './layouts/default';
 

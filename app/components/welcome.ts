@@ -1,4 +1,5 @@
 import {html} from 'lit';
+
 import {Component, TiniComponent} from '@tinijs/core';
 
 @Component()
