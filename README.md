@@ -1,5 +1,10 @@
 # TiniJS Skeleton 
 
+> [!IMPORTANT]
+> This previously experiment is wrapped up, moving forward the development will happen at <https://github.com/tinijs/tinijs>.
+>
+> If you want to use the experimental version still, please use the version `0.16.0`.
+
 The base structure of a TiniJS app.
 
 ## Install
@@ -8,7 +13,7 @@ You can create an app automatically with the help of the CLI or manually creatin
 
 Using the CLI (recommended):
 
-`npx @tinijs/cli new my-app --latest`
+`npx @tinijs/cli@0.16.0 new my-app --latest`
 
 Or, manually:
 
@@ -29,7 +34,7 @@ To access the app from other devices on the same network:
 ## Developement
 
 - Create a home for TiniJS: `mkdir TiniJS && cd TiniJS`
-- Install the CLI: `npm i -g @tinijs/cli`
+- Install the CLI: `npm i -g @tinijs/cli@0.16.0`
 - Fork the repo
 - Install dependencies: `cd skeleton && npm i`
 - Make changes & preview: `npm run dev`
